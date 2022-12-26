@@ -9,6 +9,7 @@
 
 body {
   background-image: url(../img/bg.png);
+  background-size: cover;
  }
 
 .text-standout {
@@ -263,8 +264,7 @@ section {
     /* position: absolute; */
     z-index: 9999; }
     .section-head, .section-body {
-      border-radius: 0px;
- ; }
+      border-radius: 0px; }
     
     .section-body {
       
