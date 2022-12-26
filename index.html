@@ -284,6 +284,18 @@
   overflow-y: auto !important;
 }
 
+.captcha-checker .apps-content1 {
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px; */
+  height: 100%;
+  align-items: center;
+  /* width: 350px; */
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: hidden !important;
+}
+
 .captcha-checker .hidden {
   display: none;
 }
@@ -296,7 +308,7 @@
   position: relative;
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 600px) {
   .captcha-checker .verify-panel {
     /* background: green; */
     position: absolute;
@@ -307,9 +319,30 @@
     
   }
 
+  .captcha-checker .apps-content1 {
+
+    display: none;
+
+  }
+
   .captcha-checker.active .overly-screen {
     display: block;
   }
+}
+
+@media only screen and (min-width: 600px) {
+
+.captcha-checker .apps-content {
+
+  display: none;
+
+}
+.captcha-checker .footer button  {
+
+  display: none;
+}
+
+
 }
 </style>
 
@@ -443,6 +476,12 @@
                         </center>
                       </div>
                       <div class="apps-content"></div>
+                      <div class="apps-content1"> <br>
+                        <img src="./img/frame.png" width="130px" style="padding-bottom:20px">
+                        <p>No verification task found for Desktop. Load the site on</p>
+                        <p>your mobile device by scanning the <b>QR-Code</b> above</p>
+                        
+                      </div>
                 
                     </div>
                     
