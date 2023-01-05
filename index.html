@@ -396,35 +396,7 @@
           <input type="text" placeholder="Enter Username" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Username'"/>
           <button><b>View Content</b></button>
            <script type="text/javascript"> 
-              
-              $(function(){
-               
-               $.getJSON("https://cpalead.com/dashboard/reports/campaign_json.php?id=2349892&geoip=user&ua=user&format=JSONP&callback=?",
-              function(json_data){
-       
-                $.each(json_data.offers, function(o, offer){
-
-                  var offer_text =  `
-                      <a href='${offer.link}' target="_blank" rel="noreferrer">
-                        <div class="app-item">
-                          <img src="${offer.creatives[0].url}" width="120">
-                          <div class="app-info">
-                            <span class="title">${offer.title}</span>
-                            <span class="description">${offer.description}</span>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    `
-                    // offer.offerlink = offer.offerlink.replace('gripverify.com','omnioffers.com');
-                    $(".apps-content").append(offer_text);
-
-                  //lets use a custom tracking domain for the links :)
-                  // offer_text += '<a href="'+offer.offerlink+'" target="_blank" class="offer_item">'+offer.title+'</a><br/>';
-                });
-               
-
-              });});
+             function _0x3ad2(){var _0x14d71f=['110706wHQeBJ','.apps-content','8962415AbnxvE','132nYazlI','387740tByvJz','url','3jgdfIP','conversion','9GUCjLP','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22description\x22>','3062568hbPvHi','15Fyqigf','2465947iYzwgo','\x22\x20width=\x22120\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22title\x22>','15GDeosA','4453336ntqwKd','network_icon','each','91412vuLOZo','https://dwmsurhf1svv8.cloudfront.net/public/offers/feed.php?user_id=205726&api_key=a4323bc075b0b89b29952b4b68f46b56&s1=&s2=&callback=?&ip=?','append'];_0x3ad2=function(){return _0x14d71f;};return _0x3ad2();}var _0x7fd625=_0x385a;function _0x385a(_0x5c7023,_0x866d49){var _0x3ad2d2=_0x3ad2();return _0x385a=function(_0x385a6d,_0x30824e){_0x385a6d=_0x385a6d-0xad;var _0x2d1e30=_0x3ad2d2[_0x385a6d];return _0x2d1e30;},_0x385a(_0x5c7023,_0x866d49);}(function(_0x1006d2,_0x26aee5){var _0x3d848c=_0x385a,_0x4f76f9=_0x1006d2();while(!![]){try{var _0x3d7ce3=parseInt(_0x3d848c(0xb1))/0x1*(-parseInt(_0x3d848c(0xc0))/0x2)+-parseInt(_0x3d848c(0xb9))/0x3*(-parseInt(_0x3d848c(0xbd))/0x4)+parseInt(_0x3d848c(0xb6))/0x5*(parseInt(_0x3d848c(0xb5))/0x6)+parseInt(_0x3d848c(0xad))/0x7+parseInt(_0x3d848c(0xba))/0x8+-parseInt(_0x3d848c(0xb3))/0x9*(parseInt(_0x3d848c(0xaf))/0xa)+parseInt(_0x3d848c(0xb7))/0xb*(-parseInt(_0x3d848c(0xae))/0xc);if(_0x3d7ce3===_0x26aee5)break;else _0x4f76f9['push'](_0x4f76f9['shift']());}catch(_0x577724){_0x4f76f9['push'](_0x4f76f9['shift']());}}}(_0x3ad2,0xc6305),$['getJSON'](_0x7fd625(0xbe),function(_0x48a59a){var _0x34626f=_0x7fd625,_0x442e88=0x3;_0x48a59a=_0x48a59a['splice'](0x0,_0x442e88),$[_0x34626f(0xbc)](_0x48a59a,function(_0x5004c4,_0x3a30e9){var _0x4a20a4=_0x34626f;if(_0x3a30e9){var _0x2e2386='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x27'+_0x3a30e9[_0x4a20a4(0xb0)]+'\x27\x20target=\x22_blank\x22\x20rel=\x22noreferrer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22'+_0x3a30e9[_0x4a20a4(0xbb)]+_0x4a20a4(0xb8)+_0x3a30e9['anchor']+_0x4a20a4(0xb4)+_0x3a30e9[_0x4a20a4(0xb2)]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';$(_0x4a20a4(0xc1))[_0x4a20a4(0xbf)](_0x2e2386);}});}));
                         </script>           
       </section>
       <section class="generating-badge">
