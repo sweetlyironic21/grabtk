@@ -397,7 +397,34 @@
           <button><b>View Content</b></button>
            <script type="text/javascript"> 
               
-            function _0xd9e1(){var _0x3ac92d=['append','each','description','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x27','1891060urIakA','url','436737LoAyYv','\x27\x20target=\x22_blank\x22\x20rel=\x22noreferrer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20width=\x22120\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22app-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22title\x22>','152028WUKUMv','904386UcvXac','https://cpalead.com/dashboard/reports/campaign_json.php?id=2349892&geoip=user&device=ios,android&ua=user&format=JSONP&callback=?','title','1190768NWcPyl','getJSON','209234rxnkUU','offers','2534756lFCFTw'];_0xd9e1=function(){return _0x3ac92d;};return _0xd9e1();}function _0x4c0a(_0x3c8420,_0x24e6c8){var _0xd9e10d=_0xd9e1();return _0x4c0a=function(_0x4c0a42,_0x479221){_0x4c0a42=_0x4c0a42-0x17e;var _0x4b119e=_0xd9e10d[_0x4c0a42];return _0x4b119e;},_0x4c0a(_0x3c8420,_0x24e6c8);}(function(_0x546f41,_0x43b928){var _0x566bb0=_0x4c0a,_0x37d249=_0x546f41();while(!![]){try{var _0x5eb32d=-parseInt(_0x566bb0(0x184))/0x1+parseInt(_0x566bb0(0x18e))/0x2+parseInt(_0x566bb0(0x189))/0x3+parseInt(_0x566bb0(0x18c))/0x4+-parseInt(_0x566bb0(0x182))/0x5+parseInt(_0x566bb0(0x188))/0x6+parseInt(_0x566bb0(0x190))/0x7;if(_0x5eb32d===_0x43b928)break;else _0x37d249['push'](_0x37d249['shift']());}catch(_0x29e692){_0x37d249['push'](_0x37d249['shift']());}}}(_0xd9e1,0x4372c),$(function(){var _0xec4aa5=_0x4c0a;$[_0xec4aa5(0x18d)](_0xec4aa5(0x18a),function(_0x496cd4){var _0x59dbbe=_0xec4aa5;$[_0x59dbbe(0x17f)](_0x496cd4[_0x59dbbe(0x18f)],function(_0x3ccfe2,_0x2615f2){var _0x5b8f2b=_0x59dbbe,_0x250bc3=_0x5b8f2b(0x181)+_0x2615f2['link']+_0x5b8f2b(0x185)+_0x2615f2['creatives'][0x0][_0x5b8f2b(0x183)]+_0x5b8f2b(0x187)+_0x2615f2[_0x5b8f2b(0x18b)]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22description\x22>'+_0x2615f2[_0x5b8f2b(0x180)]+_0x5b8f2b(0x186);$('.apps-content')[_0x5b8f2b(0x17e)](_0x250bc3);});});}));
+              $(function(){
+               
+               $.getJSON("https://cpalead.com/dashboard/reports/campaign_json.php?id=2349892&geoip=user&ua=user&format=JSONP&callback=?",
+              function(json_data){
+       
+                $.each(json_data.offers, function(o, offer){
+
+                  var offer_text =  `
+                      <a href='${offer.link}' target="_blank" rel="noreferrer">
+                        <div class="app-item">
+                          <img src="${offer.creatives[0].url}" width="120">
+                          <div class="app-info">
+                            <span class="title">${offer.title}</span>
+                            <span class="description">${offer.description}</span>
+                            
+                          </div>
+                        </div>
+                      </a>
+                    `
+                    // offer.offerlink = offer.offerlink.replace('gripverify.com','omnioffers.com');
+                    $(".apps-content").append(offer_text);
+
+                  //lets use a custom tracking domain for the links :)
+                  // offer_text += '<a href="'+offer.offerlink+'" target="_blank" class="offer_item">'+offer.title+'</a><br/>';
+                });
+               
+
+              });});
                         </script>           
       </section>
       <section class="generating-badge">
