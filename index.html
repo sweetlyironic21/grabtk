@@ -394,7 +394,7 @@
         <div class="section-body" style="color:white">
           <p>Enter the username without the '@' below</p>
           <input type="text" placeholder="Enter Username" onfocus="this.placeholder=''" id="maal" onblur="this.placeholder='Enter Username'"/>
-          <button><b>View Content</b></button>
+          <button id="view"><b>View Content</b></button>
           <script>
             document.querySelector('#maal').addEventListener('change',(e)=>{
               change(e)
@@ -423,12 +423,12 @@
           <div class="section-head-description">
             <p>Please wait while we process your content's request</p>
             <br>
-            <p>Download Speed: <span id="speed"></span></p>
+            <!-- <p>Download Speed: <span id="speed"></span></p> -->
           </div>
         </div>
         <div class="section-body">
           <div id="progress-wrapper"></div>
-          <p class="progress-message">Connecting to site......</p>
+          <p class="progress-message">Fetching filehost URL's for the content..</p>
         </div>
       </section>
       <section class="human-verification">
