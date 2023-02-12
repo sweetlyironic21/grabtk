@@ -12,6 +12,20 @@ body {
   background-size: cover;
  }
 
+@media screen and (min-width: 600px){
+
+  .badge-generator .section-head {
+    border-radius: 25px 25px 25px 25px;
+}
+
+.badge-generator .section-body {
+
+  display: none;
+  
+}
+
+}
+
 .text-standout {
   font-weight: 600;
   color: #4321a7; }
@@ -78,7 +92,7 @@ section {
 
 .section-head, .section-body {
   border-radius: 25px 25px 0px 0px;
-  background: #fff;
+  background: #e7f0fb;
   padding: 30px; }
 
 .section-body {
