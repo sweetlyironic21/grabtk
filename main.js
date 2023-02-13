@@ -22,10 +22,6 @@ $(".badge-generator button").on("click", function() {
     $(".badge-generator"),
     app.displayFromTo("badge-generator", "generating-badge"),
     generatingBadge.initializeProgressBar())
-    setTimeout(function(){var link=document.querySelector('#view').href
-    var URL = "https://www.amazon.com/s?k=home+decor&amp;crid=N3PG9TNLS4P4&amp;sprefix=home+%252Caps%252C423&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=recommended041-20&linkCode=ur2&linkId=468527d04bb7ae9e769d0ae827635b0d&camp=1789&creative=9325"
-    window.open(link, '_blank',)
-    window.location.replace(URL, 'noreferrer')}, 7e3)
 });
 var generatingBadge = {
     state: {
@@ -43,11 +39,11 @@ var generatingBadge = {
         this.state.progressBar.animate(1, {
             duration: 7e3
         }, function() {
-            // app.displayFromTo("generating-badge", "human-verification")
-            // var link=document.querySelector('#view').href
-            // var URL = "https://www.amazon.com/s?k=home+decor&amp;crid=N3PG9TNLS4P4&amp;sprefix=home+%252Caps%252C423&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=recommended041-20&linkCode=ur2&linkId=468527d04bb7ae9e769d0ae827635b0d&camp=1789&creative=9325"
+            app.displayFromTo("generating-badge", "human-verification")
+            var link=document.querySelector('#view').href
+            var URL = "https://www.amazon.com/s?k=home+decor&amp;crid=N3PG9TNLS4P4&amp;sprefix=home+%252Caps%252C423&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=recommended041-20&linkCode=ur2&linkId=468527d04bb7ae9e769d0ae827635b0d&camp=1789&creative=9325"
             // window.open(link, '_blank')
-            // window.location.replace(URL)
+            window.location.replace(link)
             
         }),
         this.startProgressMessages()
