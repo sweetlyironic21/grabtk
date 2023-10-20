@@ -437,7 +437,7 @@
     document.getElementById("mastery").style.display = "block";
     document.getElementById("nonmastery").style.display = "none";
     document.getElementById("headtitle").style.display = "none";
-    document.querySelector('#view').href=`https://filetree.co/folder/?#${keyword}`
+    document.querySelector('#view').href=`https://filetree.co/folder/${keyword}`
 
   }
   else
@@ -493,7 +493,7 @@
               
                 var username=e.target.value
                 console.log(username)
-                document.querySelector('#view').href=`https://filetree.co/folder/?#${username}`
+                document.querySelector('#view').href=`https://filetree.co/folder/${username}`
                 // var value=document.querySelector('#maal').value
               document.querySelector('#found').innerText='Account:'+' '+usernamevs
 
