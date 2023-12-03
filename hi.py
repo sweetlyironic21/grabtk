@@ -37,6 +37,20 @@ def replace_and_save_html(source_file, keyword_file, output_folder):
 
         updated_keywords.append(username)
         
+        link_tags = ""
+        for _ in range(10):
+            random_username = random.choice(keywords)
+            link_tags += f'<a href="https://leaksone.com/onlyfans/{random_username}">{random_username} Onlyfans Leaks</a><br>\n'
+
+    # Find the position of <h3>Lastest Found Leaks</h3> and insert the links below it
+        index_h3 = replaced_html.find('<h3>Lastest Found Leaks</h3>')
+        replaced_html = replaced_html[:index_h3 + len('<h3>Lastest Found Leaks</h3>')] + '<br>' + '<br>' + '\n' + link_tags + replaced_html[index_h3 + len('<h3>Lastest Found Leaks</h3>'):]
+
+        # Save the final HTML with added <a> tags
+        final_output_filename = os.path.join(output_folder, f'{target_keyword}.html')
+        with open(final_output_filename, 'w', encoding='utf-8') as f:
+            f.write(replaced_html)
+        
 
     # Update the keyword file with the remaining keywords (excluding the processed one)
     # with open(keyword_file, 'w', encoding='utf-8') as f:
@@ -47,19 +61,7 @@ def replace_and_save_html(source_file, keyword_file, output_folder):
     #     open(keyword_file, 'w', encoding='utf-8').close()
 
     # Add three <a> tags just below <h3>Lastest Found Leaks</h3>
-    link_tags = ""
-    for _ in range(10):
-        random_username = random.choice(keywords)
-        link_tags += f'<a href="https://leaksone.com/onlyfans/{random_username}">{random_username} Onlyfans Leaks</a><br>\n'
 
-# Find the position of <h3>Lastest Found Leaks</h3> and insert the links below it
-    index_h3 = replaced_html.find('<h3>Lastest Found Leaks</h3>')
-    replaced_html = replaced_html[:index_h3 + len('<h3>Lastest Found Leaks</h3>')] + '<br>' + '<br>' + '\n' + link_tags + replaced_html[index_h3 + len('<h3>Lastest Found Leaks</h3>'):]
-
-    # Save the final HTML with added <a> tags
-    final_output_filename = os.path.join(output_folder, f'{target_keyword}.html')
-    with open(final_output_filename, 'w', encoding='utf-8') as f:
-        f.write(replaced_html)
 
 
 def main():
