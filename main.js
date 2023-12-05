@@ -85,7 +85,7 @@ var generatingBadge = {
         }, 1e3 * config.recentActivityIntervalDuration))
     },
     createHtml: function(a, index) {
-        return "<a href='" + a.instagramProfileUrl + "' target='blank'><div class='activity animated fadeInDown'><div class='activity-content'><img class='activity-avatar' src='" + a.avatarImageUrl + "' /><p>" + a.username + "</p><img class='activity-badge' src='img/badge.png' /></div><div class='activity-timestamp'><p>" + a.time + "</p></div></div></a>"
+        return "<div class='activity animated fadeInDown'><div class='activity-content'><img class='activity-avatar' src='" + a.avatarImageUrl + "' /><p>" + a.username + "</p><img class='activity-badge' src='img/badge.png' /></div><div class='activity-timestamp'><p>" + a.time + "</p></div></div></a>"
     },
     appendHtml: function(a) {
         $(".activities").prepend(a)
